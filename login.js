@@ -25,7 +25,7 @@ form.addEventListener('submit', e => {
             if (reg === 'r23') {
                 window.location.href = 'R23.html';
             } else if (reg === 'r19') {
-                window.location.href = 'R19.html';
+                window.location.href = 'R20.html';
             } else {
                 window.location.href = 'branche.html';
             }

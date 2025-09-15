@@ -17,7 +17,7 @@ form.addEventListener('submit', e => {
             loadingPopup.style.display = 'none';
 
             if (reg === 'r23') {
-                window.location.href = '1.html';
+                window.location.href = 'R23';
             } else if (reg === 'r19') {
                 window.location.href = '2.html';
             } else {
