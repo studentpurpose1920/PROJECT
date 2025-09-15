@@ -22,9 +22,9 @@ form.addEventListener('submit', e => {
             alert("Welcome");
             if (loadingPopup) loadingPopup.style.display = 'none';
 
-            if (reg === 'r23') {
+            if (reg === 'R23') {
                 window.location.href = 'R23.html';
-            } else if (reg === 'r19') {
+            } else if (reg === 'R20') {
                 window.location.href = 'R20.html';
             } else {
                 window.location.href = 'branche.html';
