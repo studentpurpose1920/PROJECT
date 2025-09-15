@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 105vh;
+            z-index: -2;
+            background: url('https://storage.pardot.com/1039953/1706116435QZ2UQe7j/3d_animation_program.png') center center/cover no-repeat;
+            opacity: 0.9;
+        }
+
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        img {
+            background-color: black;
+        }
+
+        div {
+            /* text-align: center; */
+            position: absolute;
+            left: 600px;
+            top: 360px;
+            gap: 200px;
+            font-size: 25px;
+        }
+
+        h1 {
+            color: rgb(255, 51, 32);
+            text-align: center;
+            position: absolute;
+            top: 20px;
+            left: 630px;
+            font-size: 50px;
+
+            animation: mymove 1.5s;
+        }
+
+        @keyframes mymove {
+            40% {
+                font-size: 25px;
+            }
+
+        }
+
+        .names {
+            position: absolute;
+            left: 750px;
+            color: rgb(255, 208, 0);
+            animation: blink 1.4s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            100% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        p {
+            color: bisque;
+            font-size: 20px;
+            position: absolute;
+            top: 100px;
+            left: 650px;
+
+            animation: mymove 1.5s;
+        }
+
+        @keyframes mymove {
+            40% {
+                font-size: 25px;
+            }
+
+        }
+
+        a {
+            color: rgb(0, 215, 244);
+        }
+
+        table {
+            color: lawngreen;
+            position: absolute;
+            top: -150px;
+            left: -30vh;
+            width: 800px;
+            height: 100px;
+        }
+
+        .enter {
+            text-align: center;
+            font-size: 30px;
+            width: 200px;
+        }
+
+        .branch {
+            text-align: center;
+            font-size: 30px;
+            width: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <p>click your Branch</p>
+    <div class="Branch">
+        <table border="1">
+            <tr>
+                <td class="branch">
+                    <h5>Computer Science And Engineering (CSE)</h1>
+                </td>
+                <td class="enter">
+                    <a href="R23\CSE\cse-semisters.html">Enter</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="branch">
+                    <h5>Electronics and Communication Engineering (ECE)</h1>
+                </td>
+                <td class="enter">
+                    <a href="R23\ECE\ece-semisters.html">Enter</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="branch">
+                    <h5>Artificial Intelligence and Machine Learning (AIML)</h1>
+                </td>
+                <td class="enter">
+                    <a href="R23\AIML\aiml-semisters.html">Enter</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="branch">
+                    <h5>Electrical and Electronics Engineering (EEE)</h1>
+                </td>
+                <td class="enter">
+                    <a href="R23\EEE\eee-semisters.html">Enter</a>
+                </td>
+
+            </tr>
+            </a>
+        </table>
+    </div>
+
+</body>
+
+</html>
