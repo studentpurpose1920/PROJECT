@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video Background</title>
     <style>
         body {
             margin: 0;
@@ -13,6 +13,28 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.762);
+            z-index: -1;
         }
 
         table {
@@ -21,6 +43,8 @@
             height: 100px;
             text-align: center;
             font-size: 30px;
+            z-index: 1;
+            position: relative;
         }
 
         a {
@@ -32,25 +56,17 @@
             font-style: italic;
             color: rgb(0, 255, 26);
         }
-        #bg-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    /* Keep it behind everything */
-}
     </style>
 </head>
 
 <body>
-     <video autoplay muted loop id="bg-video">
-        <source
-            src="https://go.screenpal.com/watch/cTQDiOno7O2"
-            type="video/mp4">
+    <!-- Video as background -->
+    <video id="bg-video" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2023/11/14/189046-884476411_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
+
+    <!-- Table of links -->
     <table border="1">
         <tr>
             <td><a href="1-1.html">1-1</a></td>
