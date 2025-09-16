@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.762);
+            z-index: -1;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffce00;
+            /* default yellow */
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #00ffea;
+            /* when mouse hovers */
+        }
+
+        a:active {
+            color: #ff0000;
+            /* when clicking/dragging */
+        }
+    </style>
 </head>
+
 <body>
-    <h1><a href="https://drive.google.com/drive/folders/1sHJk4AZ5jNArpZ9pnBaeCiRdDiZNmvJr?usp=sharing">Computer Networks </a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/1qFrq0U3dYQFpdy3Cv2dkCnaqvaV7vKaO?usp=sharing">Deep Learning </a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/1tBE1m_rephvUsFWWts5QmdYOrVG4YuAD?usp=sharing">Design and Analysis of Algorithms </a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/1pDT0ZdbJPKwCUNU7NBCVOCppFqXRTEjQ?usp=sharing">Untitled folder</a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/10D6w6iw3PA1fKuj5fhqyOrO5527ZdV8q?usp=sharing">Untitled folder</a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1sHJk4AZ5jNArpZ9pnBaeCiRdDiZNmvJr?usp=sharing">Computer Networks
+        </a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1qFrq0U3dYQFpdy3Cv2dkCnaqvaV7vKaO?usp=sharing">Deep Learning
+        </a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1tBE1m_rephvUsFWWts5QmdYOrVG4YuAD?usp=sharing">Design and
+            Analysis of Algorithms </a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1pDT0ZdbJPKwCUNU7NBCVOCppFqXRTEjQ?usp=sharing">Untitled
+            folder</a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/10D6w6iw3PA1fKuj5fhqyOrO5527ZdV8q?usp=sharing">Untitled
+            folder</a></h1>
 </body>
+
 </html>

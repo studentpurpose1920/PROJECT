@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.762);
+            z-index: -1;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffce00;
+            /* default yellow */
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #00ffea;
+            /* when mouse hovers */
+        }
+
+        a:active {
+            color: #ff0000;
+            /* when clicking/dragging */
+        }
+    </style>
 </head>
+
 <body>
-    <h1><a href="https://drive.google.com/drive/folders/1gQxcuHtgiCTFPYd3QAIUFTcXUgLYCp7B?usp=sharing">Communicative English </a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/1-U1GBPO171fraZenjrtRwyV0V6X0wm7c?usp=sharing">Mathematics – I</a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/1XCPDIilO53Rzw0JICvd0Jegkh07YA-gW?usp=sharing">Applied Chemistry </a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/1QP_xUH1FxDnf8ho92TgM7Xrb3utcIVMt?usp=sharing">Programming for Problem Solving using C</a></h1>
-    <h1><a href="https://drive.google.com/drive/folders/1w6TZ1V-29WWZTLjKbQuzmaOJbW4Qhaii?usp=sharing">Computer Engineering Workshop </a></h1>
+    <!-- Video as background -->
+    <video id="bg-video" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2020/07/30/45961-447087612_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Links -->
+    <h1><a href="https://drive.google.com/drive/folders/1gQxcuHtgiCTFPYd3QAIUFTcXUgLYCp7B?usp=sharing">Communicative
+            English</a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1-U1GBPO171fraZenjrtRwyV0V6X0wm7c?usp=sharing">Mathematics –
+            I</a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1XCPDIilO53Rzw0JICvd0Jegkh07YA-gW?usp=sharing">Applied
+            Chemistry</a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1QP_xUH1FxDnf8ho92TgM7Xrb3utcIVMt?usp=sharing">Programming for
+            Problem Solving using C</a></h1>
+    <h1><a href="https://drive.google.com/drive/folders/1w6TZ1V-29WWZTLjKbQuzmaOJbW4Qhaii?usp=sharing">Computer
+            Engineering Workshop</a></h1>
 </body>
+
 </html>
