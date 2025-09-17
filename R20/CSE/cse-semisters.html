@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.762);
+            z-index: -1;
+        }
+
+        table {
+            border-color: rgb(17, 225, 225);
+            width: 90px;
+            height: 100px;
+            text-align: center;
+            font-size: 30px;
+            z-index: 1;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffce00;
+        }
+
+        td {
+            font-style: italic;
+            color: rgb(0, 255, 26);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video as background -->
+    <video id="bg-video" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2023/11/14/189046-884476411_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Table of links -->
+    <table border="1">
+        <tr>
+            <td><a href="1-1.html">1-1</a></td>
+        </tr>
+        <tr>
+            <td><a href="1-2.html">1-2</a></td>
+        </tr>
+        <tr>
+            <td><a href="2-1.html">2-1</a></td>
+        </tr>
+        <tr>
+            <td><a href="2-2.html">2-2</a></td>
+        </tr>
+        <tr>
+            <td><a href="3-1.html">3-1</a></td>
+        </tr>
+        <tr>
+            <td><a href="3-2.html">3-2</a></td>
+        </tr>
+        <tr>
+            <td><a href="4-1.html">4-1</a></td>
+        </tr>
+        <tr>
+            <td><a href="4-2.html">4-2</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>
