@@ -15,23 +15,28 @@
 
         /* NAVBAR */
         header {
+            background: #000000;
+            padding: 10px 15px;
+        }
+
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 15px;
-            background: #0a0a2a;
         }
 
-        header img {
-            height: 35px;
+        .logo {
+            height: 60px;
+            width: auto;
+            border-radius: 5px;
         }
 
         .navbar {
             display: none;
             flex-direction: column;
             position: absolute;
-            top: 60px;
-            right: 10px;
+            top: 70px;
+            right: 15px;
             background: #333;
             border-radius: 8px;
             width: 180px;
@@ -50,35 +55,14 @@
             background: red;
         }
 
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            flex-direction: column;
-            background: #444;
-            border-radius: 6px;
-            margin-top: 5px;
-        }
-
-        .dropdown-content a {
-            color: #fff;
-            padding: 8px 12px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: flex;
-        }
-
         .menu {
-            font-size: 24px;
+            font-size: 26px;
             cursor: pointer;
             color: #fff;
             display: block;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             text-align: center;
             padding: 40px 15px 20px;
@@ -107,10 +91,13 @@
             font-weight: bold;
             color: white;
             cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
 
-            :hover {
-                color: #000;
-            }
+        .btn:hover {
+            color: #000;
+            background: #fff;
         }
 
         /* STATS */
@@ -135,78 +122,25 @@
             color: #ccc;
         }
 
-        /* TESTIMONIALS */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
-            padding: 15px;
-            background: linear-gradient(to bottom, #1a1a4d, #3a3a6d);
+        /* MARQUEE */
+        marquee {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            white-space: nowrap;
         }
 
         .card {
-            background: #f5f5f5;
-            color: #000;
-            border-radius: 10px;
-            padding: 12px;
+            display: inline-block;
+            width: 200px;
+            height: 90px;
+            margin: 0 15px;
+            background: white;
+            color: black;
             text-align: center;
-        }
-
-        .card img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 8px;
-        }
-
-        .card h3 {
-            font-family: 'Brush Script MT', cursive;
-            margin: 6px 0 3px;
-        }
-
-        /* CAREER ROADMAP */
-        .career {
-            text-align: center;
-            padding: 30px 15px;
-            background: #fff;
-            color: #000;
-        }
-
-        .career h2 {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-        }
-
-        .roadmap {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            max-width: 95%;
-            margin: auto;
-        }
-
-        .roadmap-card {
-            background: #f5f5f5;
+            line-height: 79px;
+            font-size: 20px;
             border-radius: 10px;
-            padding: 12px;
-        }
-
-        .roadmap-card img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-
-        .roadmap-card h3 {
-            font-size: 1rem;
-            margin: 6px 0 3px;
-        }
-
-        .roadmap-card p {
-            font-size: 0.85rem;
-            color: #444;
         }
 
         /* DESKTOP FIX */
@@ -239,11 +173,6 @@
                 grid-template-columns: repeat(4, 1fr);
                 max-width: 800px;
             }
-
-            .roadmap {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 900px;
-            }
         }
     </style>
 </head>
@@ -251,25 +180,24 @@
 <body>
     <!-- NAVBAR -->
     <header>
-        <img src="https://i.ibb.co/5WZQ7S6/datavalley-logo.png" alt="Datavalley Logo">
-        <div class="menu" onclick="toggleMenu()">☰</div>
-        <nav class="navbar" id="navbar">
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="login.html">Login</a>
-            </div>
-            </div>
-        </nav>
+        <div class="nav-container">
+            <img class="logo" src="https://thumbs.dreamstime.com/b/studying-book-icon-146773785.jpg" alt="Logo">
+            <div class="menu" onclick="toggleMenu()">☰</div>
+            <nav class="navbar" id="navbar">
+                <a href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <button><a href="login.html" style="background-color: #ff2e46;">Login</a></button>
+            </nav>
+        </div>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Datavalley LMS Platform</h1>
-        <p>Get started with your immersive learning journey now! Access cutting-edge training solutions and personalized
-            learning experiences.</p>
-        <button class="btn">Get Started</button>
+        <h1>Any members Access</h1>
+        <p>Get started with your immersive learning journey now! Good learning experiences.</p>
+        <a href="login.html" class="btn">Get Started</a>
     </section>
 
     <!-- STATS -->
@@ -280,84 +208,32 @@
         <div class="stat">95+ <small>Success Rate</small></div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
-        <div class="card">
-            <img src="https://i.ibb.co/kQF5Csn/profile1.png" alt="Nandhini">
-            <h3>Nandhini</h3>
-            <p>Software Analyst<br>HCL</p>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/ZTQp3qB/profile2.png" alt="R.Deepthi">
-            <h3>R.Deepthi</h3>
-            <p>Lumina DataMatics<br>Accenture</p>
-        </div>
-    </section>
+    <!-- MARQUEE -->
+    <marquee behavior="scroll" direction="left" scrollamount="15">
+        <div class="card">Venu</div>
+        <div class="card">Gayathri</div>
+        <div class="card">Sofiya</div>
+        <div class="card">Bhargavi</div>
+        <div class="card">Sekhar</div>
+        <div class="card">Siva</div>
+    </marquee>
 
-    <!-- CAREER ROADMAP -->
-    <section class="career">
-        <h2>Your Career Roadmap</h2>
-        <div class="roadmap">
-            <div class="roadmap-card">
-                <img src="https://i.ibb.co/xMYr4sh/code.png" alt="Code Foundations">
-                <h3>Code Foundations</h3>
-                <p>30 Weeks</p>
-            </div>
-            <div class="roadmap-card">
-                <img src="https://i.ibb.co/zr8h8Bb/fullstack.png" alt="Full Stack">
-                <h3>Full Stack Mastery</h3>
-                <p>40 Weeks</p>
-            </div>
-            <div class="roadmap-card">
-                <img src="https://i.ibb.co/2WNS9Tg/api.png" alt="Tech Specialization">
-                <h3>Tech Specialization</h3>
-                <p>20 Weeks</p>
-            </div>
-            <div class="roadmap-card">
-                <img src="https://i.ibb.co/n6rCCJ3/project.png" alt="Project Accelerator">
-                <h3>Project Accelerator</h3>
-                <p>20 Weeks</p>
-            </div>
-        </div>
-        <a href="login.html" id="GetStarted"><b>Get started</b></a>
-
-        <div class="order">
-            <div class="order1">
-                <div class="count">500+</div>
-                <div class="name">Courses</div>
-                <div class="underline"></div>
-            </div>
-            <div class="order1">
-                <div class="count">50,000+</div>
-                <div class="name">Students</div>
-                <div class="underline"></div>
-            </div>
-            <div class="order1">
-                <div class="count">100+</div>
-                <div class="name">Instuctors</div>
-                <div class="underline"></div>
-            </div>
-            <div class="order1">
-                <div class="count">95+</div>
-                <div class="name">Success Rate</div>
-                <div class="underline"></div>
-            </div>
-        </div>
-        <marquee behavior="scroll" direction="left" scrollamount="15">
-            <div class="card">Venu</div>
-            <div class="card">Gayathri</div>
-            <div class="card">Sofiya</div>
-            <div class="card">Bhargavi</div>
-            <div class="card">Sekhar</div>
-            <div class="card">Siva</div>
-
-            <div class="card">Venu</div>
-            <div class="card">Gayathri</div>
-            <div class="card">Sofiya</div>
-            <div class="card">Bhargavi</div>
-            <div class="card">Sekhar</div>
-            <div class="card">Siva</div>
-    </section>
+    <marquee behavior="scroll" direction="right" scrollamount="15">
+        <div class="card">Venu</div>
+        <div class="card">Gayathri</div>
+        <div class="card">Sofiya</div>
+        <div class="card">Bhargavi</div>
+        <div class="card">Sekhar</div>
+        <div class="card">Siva</div>
+    </marquee>
+    <marquee behavior="scroll" direction="left" scrollamount="15">
+        <div class="card">Venu</div>
+        <div class="card">Gayathri</div>
+        <div class="card">Sofiya</div>
+        <div class="card">Bhargavi</div>
+        <div class="card">Sekhar</div>
+        <div class="card">Siva</div>
+    </marquee>
 
     <script>
         function toggleMenu() {
