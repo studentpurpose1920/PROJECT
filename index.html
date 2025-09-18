@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datavalley LMS Platform</title>
+    <title>EASY WAY</title>
     <style>
         body {
             margin: 0;
@@ -69,7 +69,8 @@
         }
 
         .hero h1 {
-            font-family: 'Brush Script MT', cursive;
+            font-style: italic;
+
             font-size: 1.8rem;
             margin: 10px 0;
         }
@@ -126,7 +127,7 @@
         marquee {
             display: block;
             width: 100%;
-            padding: 12px 0;
+            padding: 20px 0;
             white-space: nowrap;
         }
 
@@ -174,6 +175,33 @@
                 max-width: 800px;
             }
         }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #000000;
+        }
+
+        textarea {
+            width: 83%;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #000000;
+            text-align: left;
+
+        }
+
+        button {
+            background-color: #2600fa;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -195,7 +223,7 @@
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Any members Access</h1>
+        <h1>Any One Access </h1>
         <p>Get started with your immersive learning journey now! Good learning experiences.</p>
         <a href="login.html" class="btn">Get Started</a>
     </section>
@@ -209,7 +237,7 @@
     </section>
 
     <!-- MARQUEE -->
-    <marquee behavior="scroll" direction="left" scrollamount="15">
+    <marquee behavior="scroll" direction="left" scrollamount="15"><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="card">Venu</div>
         <div class="card">Gayathri</div>
         <div class="card">Sofiya</div>
@@ -218,7 +246,7 @@
         <div class="card">Siva</div>
     </marquee>
 
-    <marquee behavior="scroll" direction="right" scrollamount="15">
+    <marquee behavior="scroll" direction="right" scrollamount="15"><br>
         <div class="card">Venu</div>
         <div class="card">Gayathri</div>
         <div class="card">Sofiya</div>
@@ -226,14 +254,26 @@
         <div class="card">Sekhar</div>
         <div class="card">Siva</div>
     </marquee>
-    <marquee behavior="scroll" direction="left" scrollamount="15">
+    <marquee behavior="scroll" direction="left" scrollamount="15"><br>
         <div class="card">Venu</div>
         <div class="card">Gayathri</div>
         <div class="card">Sofiya</div>
         <div class="card">Bhargavi</div>
         <div class="card">Sekhar</div>
         <div class="card">Siva</div>
-    </marquee>
+    </marquee><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <section id="contact"
+        style="max-width: 600px; margin: 0 auto 40px; background: #fbfbfb; border-radius: 10px; box-shadow: 0 2px 12px #000000; padding: 32px 22px;">
+        <h3 style="color:#1a237e;">Contact Us</h3>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="submitBtn">Send</button>
+        </form>
+        <p id="feedback" style="display:none; margin-top:12px;"></p>
+    </section>
 
     <script>
         function toggleMenu() {
@@ -241,6 +281,9 @@
             navbar.style.display = (navbar.style.display === "flex") ? "none" : "flex";
         }
     </script>
+    <script src="contact.js"></script>
+    <script src='https://www.noupe.com/embed/01995cf972687af9b844c4a5235e5c056c97.js'></script>
+
 </body>
 
 </html>

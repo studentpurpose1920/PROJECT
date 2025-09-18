@@ -1,4 +1,3 @@
-// Replace this URL with your deployed Apps Script Web App URL
 const scriptURL = 'https://script.google.com/macros/s/AKfycbynlywozCnPUwuBFfdePu17aJS4MpDKR7vOvmBaYjolsEl2GCrTToLIMI8D_GJ1y0yJMA/exec';
 
 const form = document.forms['contact-form'];
