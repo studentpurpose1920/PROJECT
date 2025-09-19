@@ -4,17 +4,16 @@
     const submitBtn = document.getElementById('submitBtn');
 
     // 👉 Use your deployed Google Apps Script Web App URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzfP4daw-0rf8rrasLZCyPa1uylYGDOxQO27rby43UZ0WMWoLSyU0Twpz5r5DjpgEiD/exec';
-
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhN35C1iy2z_4IwrQNHwTjWpY83FAeZjqcyUaT3UsD4Yi1f3fDJmi-xsSC5Haide9q/exec';
     form.addEventListener('submit', function (ev) {
         ev.preventDefault();
         feedback.style.display = 'none';
 
         const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
+        const collegeName = document.getElementById('College-Name').value.trim();
         const message = document.getElementById('message').value.trim();
 
-        if (!name || !email || !message) {
+        if (!name || !collegeName || !message) {
             feedback.textContent = '⚠️ Please fill all fields.';
             feedback.style.color = 'red';
             feedback.style.display = 'block';
@@ -25,10 +24,10 @@
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
-        // Use FormData (no preflight / CORS issues)
+        // Use FormData
         const formData = new FormData();
         formData.append('name', name);
-        formData.append('email', email);
+        formData.append('College-Name', collegeName);
         formData.append('message', message);
 
         fetch(SCRIPT_URL, {
