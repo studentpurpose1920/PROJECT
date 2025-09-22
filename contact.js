@@ -1,18 +1,17 @@
 (function () {
-
-
     const form = document.getElementById('contactForm');
     const feedback = document.getElementById('feedback');
     const submitBtn = document.getElementById('submitBtn');
 
     // 👉 Use your deployed Google Apps Script Web App URL
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhN35C1iy2z_4IwrQNHwTjWpY83FAeZjqcyUaT3UsD4Yi1f3fDJmi-xsSC5Haide9q/exec';
+
     form.addEventListener('submit', function (ev) {
         ev.preventDefault();
         feedback.style.display = 'none';
 
         const name = document.getElementById('name').value.trim();
-        const collegeName = document.getElementById('College-Name').value.trim();
+        const collegeName = document.getElementById('collegeName').value.trim(); // ✅ fixed ID
         const message = document.getElementById('message').value.trim();
 
         if (!name || !collegeName || !message) {
@@ -29,7 +28,7 @@
         // Use FormData
         const formData = new FormData();
         formData.append('name', name);
-        formData.append('College-Name', collegeName);
+        formData.append('collegeName', collegeName); // ✅ match key with HTML + script
         formData.append('message', message);
 
         fetch(SCRIPT_URL, {
