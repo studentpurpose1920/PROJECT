@@ -27,9 +27,9 @@
 
         // Use FormData
         const formData = new FormData();
-        formData.append('name', name);
-        formData.append('collegeName', collegeName); // ✅ match key with HTML + script
-        formData.append('message', message);
+        formData.append('name', name), Request;
+        formData.append('collegeName', collegeName), Request; // ✅ match key with HTML + script
+        formData.append('message', message), Request;
 
         fetch(SCRIPT_URL, {
             method: 'POST',
