@@ -4,7 +4,7 @@
     const submitBtn = document.getElementById('submitBtn');
 
     // 👉 Use your deployed Google Apps Script Web App URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhN35C1iy2z_4IwrQNHwTjWpY83FAeZjqcyUaT3UsD4Yi1f3fDJmi-xsSC5Haide9q/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz1ruxDPID9RJ0uC390RFQoZUvuKTPKswDC8f8EVonGnrd-QBZN3E_xmrgy7eD1uHOq/exec';
 
     form.addEventListener('submit', function (ev) {
         ev.preventDefault();
