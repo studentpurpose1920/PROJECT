@@ -5,269 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EASY WORLD</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom, #0a0a2a, #1a1a4d);
-            color: #fff;
-        }
-
-        header {
-            background: #000000;
-            padding: 10px 15px;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 60px;
-            width: auto;
-            border-radius: 5px;
-        }
-
-        .navbar {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            right: 15px;
-            background: #333;
-            border-radius: 8px;
-            width: 180px;
-            z-index: 999;
-        }
-
-        .navbar a {
-            font-size: 14px;
-            color: white;
-            padding: 10px 14px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .navbar a:hover {
-            background: red;
-        }
-
-        .menu {
-            font-size: 26px;
-            cursor: pointer;
-            color: #fff;
-            display: block;
-        }
-
-        /* HERO */
-        .hero {
-            text-align: center;
-            padding: 40px 15px 20px;
-        }
-
-        .hero h1 {
-            font-style: italic;
-
-            font-size: 1.8rem;
-            margin: 10px 0;
-        }
-
-        .hero p {
-            font-size: 0.95rem;
-            max-width: 90%;
-            margin: auto;
-            line-height: 1.4;
-        }
-
-        .btn {
-            margin-top: 15px;
-            background: #ff2e46;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            color: #000;
-            background: #fff;
-        }
-
-        /* STATS */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 25px auto;
-            max-width: 90%;
-            text-align: center;
-        }
-
-        .stat {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #ff2e46;
-        }
-
-        .stat small {
-            display: block;
-            font-size: 0.8rem;
-            color: #ccc;
-        }
-
-        marquee {
-            display: block;
-            width: 100%;
-            padding: 20px 0;
-            white-space: nowrap;
-        }
-
-        .card {
-            display: inline-block;
-            width: 200px;
-            height: 90px;
-            margin: 0 15px;
-            background: white;
-            color: black;
-            text-align: center;
-            line-height: 79px;
-            font-size: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px #ffffffc4
-        }
-
-        @media (min-width: 768px) {
-            .navbar {
-                display: flex !important;
-                position: static;
-                flex-direction: row;
-                background: none;
-                width: auto;
-            }
-
-            .navbar a {
-                padding: 12px 16px;
-            }
-
-            .menu {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .stats {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 800px;
-            }
-        }
-
-        input {
-            width: 90%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border: 1px solid #000000;
-        }
-
-        textarea {
-            width: 83%;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #000000;
-            text-align: left;
-
-        }
-
-        button {
-            background-color: #2600fa;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <header>
-        <div class="nav-container">
+        <div class=" nav-container">
             <img class="logo" src="https://thumbs.dreamstime.com/b/studying-book-icon-146773785.jpg" alt="Logo">
             <div class="menu" onclick="toggleMenu()">☰</div>
             <nav class="navbar" id="navbar">
                 <a href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <button><a href="login.html" style="background-color: #ff2e46;">Login</a></button>
+                <a href="#courses">Courses</a>
+                <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#about">About</a>
+                <a href="login.html" style="background:#ff2e46; padding:8px 14px; border-radius:6px;">Login</a>
             </nav>
         </div>
     </header>
 
-
-    <section class="hero">
-        <h1>Any One Access </h1>
-        <p>Get started with your immersive learning journey now! Good learning experiences.</p>
-        <a href="login.html" class="btn">Get Started</a>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to EASY WORLD</h1>
+            <p>Learn, Grow, and Succeed with our immersive learning experience</p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
     </section>
 
-    <section class="stats">
-        <div class="stat">4<small>Courses</small></div>
-        <div class="stat">Any One Access<small>Students</small></div>
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About EASY WORLD</h2>
+        <p>EASY WORLD is a digital learning hub where students can access resources, explore courses, and track their
+            academic journey seamlessly. Whether you’re in R20 or R23 regulation, we provide tailored learning support.
+        </p>
     </section>
 
-    <marquee behavior="scroll" direction="left" scrollamount="15"><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="card">Venu</div>
-        <div class="card">Gayathri</div>
-        <div class="card">Sofiya</div>
-        <div class="card">Bhargavi</div>
-        <div class="card">Sekhar</div>
-        <div class="card">Siva</div>
-    </marquee>
-
-    <marquee behavior="scroll" direction="right" scrollamount="15"><br>
-        <div class="card">Venu</div>
-        <div class="card">Gayathri</div>
-        <div class="card">Sofiya</div>
-        <div class="card">Bhargavi</div>
-        <div class="card">Sekhar</div>
-        <div class="card">Siva</div>
-    </marquee>
-
-    <marquee behavior="scroll" direction="left" scrollamount="15"><br>
-        <div class="card">Venu</div>
-        <div class="card">Gayathri</div>
-        <div class="card">Sofiya</div>
-        <div class="card">Bhargavi</div>
-        <div class="card">Sekhar</div>
-        <div class="card">Siva</div>
-    </marquee><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <section id="contact"
-        style="max-width: 600px; margin: 0 auto 40px; background: #fbfbfb; border-radius: 10px; box-shadow: 0 2px 12px #000000; padding: 32px 22px;">
-        <h3 style="color:#1a237e;">Contact Us</h3>
-        <form id="contactForm">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="text" id="College-Name" name="College-Name" placeholder="College-Name" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" id="submitBtn">Send</button>
-        </form>
-        <p id="feedback" style="display:none; margin-top:12px;"></p>
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="feature">
+            <h3>📚 Easy Access</h3>
+            <p>All resources are just a click away – anytime, anywhere.</p>
+        </div>
+        <div class="feature">
+            <h3>⚡ Fast Navigation</h3>
+            <p>Seamlessly move between courses and regulations.</p>
+        </div>
+        <div class="feature">
+            <h3>🌍 Modern Design</h3>
+            <p>A clean, responsive design that looks great on all devices.</p>
+        </div>
+        <div class="feature">
+            <h3>🎯 Student Focused</h3>
+            <p>Built to enhance your academic journey with minimal distractions.</p>
+        </div>
     </section>
+
+    <!-- Courses -->
+    <section class="courses" id="courses">
+        <h2>Popular Courses</h2>
+        <div class="course-grid">
+            <div class="course">
+                <h3>CSE</h3>
+                <p>Explore Computer Science courses and projects.</p>
+            </div>
+            <div class="course">
+                <h3>AIML</h3>
+                <p>Artificial Intelligence & Machine Learning resources.</p>
+            </div>
+            <div class="course">
+                <h3>ECE</h3>
+                <p>Electronics and Communication Engineering modules.</p>
+            </div>
+            <div class="course">
+                <h3>EEE</h3>
+                <p>Electrical and Electronics Engineering learning path.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Students Say</h2>
+        <marquee behavior="scroll" direction="left" scrollamount="15">
+            <div class="card">Venu</div>
+            <div class="card">Gayathri</div>
+            <div class="card">Sofiya</div>
+            <div class="card">Bhargavi</div>
+            <div class="card">Sekhar</div>
+            <div class="card">Siva</div>
+        </marquee>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2025 EASY WORLD | All Rights Reserved</p>
+        <p>
+            <a href="#about">About</a> |
+            <a href="#features">Features</a> |
+            <a href="#courses">Courses</a> |
+            <a href="#testimonials">Testimonials</a> |
+            <a href="login.html">Login</a>
+        </p>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h3>Contact Us</h3>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="text" id="collegeName" name="collegeName" placeholder="College Name" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" id="submitBtn">Send</button>
+            </form>
+            <p id="feedback" style="display:none; margin-top:12px;"></p>
+        </section>
+    </footer>
 
     <script>
         function toggleMenu() {
@@ -275,6 +127,7 @@
             navbar.style.display = (navbar.style.display === "flex") ? "none" : "flex";
         }
     </script>
+
     <script src="contact.js"></script>
 </body>
 
