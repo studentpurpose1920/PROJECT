@@ -1,63 +1,40 @@
-(function () {
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('feedback');
-    const submitBtn = document.getElementById('submitBtn');
+const scriptURL = "https://script.google.com/macros/s/AKfycbynGFS1eeSbpN21DNeOmlApUEXzkArT-6VwTQK6kdY9_c9-jDkS493bBfLjXxr8i0kX/exec"; // Replace with your Apps Script URL
+const form = document.getElementById("contactForm");
+const response = document.getElementById("response");
 
-    // 👉 Use your deployed Google Apps Script Web App URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz1ruxDPID9RJ0uC390RFQoZUvuKTPKswDC8f8EVonGnrd-QBZN3E_xmrgy7eD1uHOq/exec';
+const sendBtn = document.getElementById("sendBtn");
+const btnText = document.getElementById("btnText");
+const spinner = document.getElementById("spinner");
 
-    form.addEventListener('submit', function (ev) {
-        ev.preventDefault();
-        feedback.style.display = 'none';
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const formData = new FormData(form);
 
-        const name = document.getElementById('name').value.trim();
-        const collegeName = document.getElementById('collegeName').value.trim(); // ✅ fixed ID
-        const message = document.getElementById('message').value.trim();
+    // Show loading effect
+    sendBtn.disabled = true;
+    btnText.textContent = "Sending...";
+    spinner.style.display = "inline-block";
 
-        if (!name || !collegeName || !message) {
-            feedback.textContent = '⚠️ Please fill all fields.';
-            feedback.style.color = 'red';
-            feedback.style.display = 'block';
-            return;
-        }
-
-        // Disable button while sending
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-
-        // Use FormData
-        const formData = new FormData();
-        formData.append('name', name), Request;
-        formData.append('collegeName', collegeName), Request; // ✅ match key with HTML + script
-        formData.append('message', message), Request;
-
-        fetch(SCRIPT_URL, {
-            method: 'POST',
-            body: formData
+    fetch(scriptURL, { method: "POST", body: formData })
+        .then(res => res.json())
+        .then(data => {
+            if (data.result === "success") {
+                response.textContent = "✅ Message Sent Successfully!";
+                response.style.color = "green";
+                form.reset();
+            } else {
+                response.textContent = "❌ Error: " + data.error;
+                response.style.color = "red";
+            }
         })
-            .then(response => response.json())
-            .then(data => {
-                if (data && data.status === 'success') {
-                    feedback.textContent = '✅ Thanks — your message was sent!';
-                    feedback.style.color = 'green';
-                    feedback.style.display = 'block';
-                    form.reset();
-                } else {
-                    feedback.textContent = '❌ Error saving your message.';
-                    feedback.style.color = 'red';
-                    feedback.style.display = 'block';
-                    console.error('Server response:', data);
-                }
-            })
-            .catch(err => {
-                feedback.textContent = '⚠️ Network error. Try again later.';
-                feedback.style.color = 'red';
-                feedback.style.display = 'block';
-                console.error(err);
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send';
-            });
-    });
-})();
+        .catch(err => {
+            response.textContent = "❌ Network Error: " + err.message;
+            response.style.color = "red";
+        })
+        .finally(() => {
+            // Reset button
+            sendBtn.disabled = false;
+            btnText.textContent = "Send";
+            spinner.style.display = "none";
+        });
+});

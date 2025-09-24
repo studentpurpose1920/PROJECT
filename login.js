@@ -1,5 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbynlywozCnPUwuBFfdePu17aJS4MpDKR7vOvmBaYjolsEl2GCrTToLIMI8D_GJ1y0yJMA/exec';
-
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxthysX9kAkfElLIqKZymENc5os2WouW1mvab1gRSvcQKV1Ngw9PE70S0t3YQpNZ2sPkQ/exec';
 const form = document.forms['contact-form'];
 const loadingPopup = document.getElementById('loading');
 

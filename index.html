@@ -64,24 +64,26 @@
     <!-- Courses -->
     <section class="courses" id="courses">
         <h2>Popular Courses</h2>
-        <div class="course-grid">
-            <div class="course">
-                <h3>CSE</h3>
-                <p>Explore Computer Science courses and projects.</p>
-            </div>
-            <div class="course">
-                <h3>AIML</h3>
-                <p>Artificial Intelligence & Machine Learning resources.</p>
-            </div>
-            <div class="course">
-                <h3>ECE</h3>
-                <p>Electronics and Communication Engineering modules.</p>
-            </div>
-            <div class="course">
-                <h3>EEE</h3>
-                <p>Electrical and Electronics Engineering learning path.</p>
-            </div>
+        <div class="course" onclick="window.location.href='login.html?course=CSE'">
+            <h3>CSE</h3>
+            <p>Explore Computer Science courses and projects.</p>
         </div>
+
+        <div class="course" onclick="window.location.href='login.html?course=AIML'">
+            <h3>AIML</h3>
+            <p>Artificial Intelligence & Machine Learning resources.</p>
+        </div>
+
+        <div class="course" onclick="window.location.href='login.html?course=ECE'">
+            <h3>ECE</h3>
+            <p>Electronics and Communication Engineering modules.</p>
+        </div>
+
+        <div class="course" onclick="window.location.href='login.html?course=EEE'">
+            <h3>EEE</h3>
+            <p>Electrical and Electronics Engineering learning path.</p>
+        </div>
+
     </section>
 
     <!-- Testimonials -->
@@ -110,14 +112,26 @@
 
         <!-- Contact Section -->
         <section class="contact-section">
+            <!-- <div class="contact-section"> -->
             <h3>Contact Us</h3>
             <form id="contactForm">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="text" id="collegeName" name="collegeName" placeholder="College Name" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" id="submitBtn">Send</button>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="college" placeholder="College Name" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit" id="sendBtn">
+                    <span id="btnText">Send</span>
+                    <span class="spinner" id="spinner"></span>
+                </button>
             </form>
-            <p id="feedback" style="display:none; margin-top:12px;"></p>
+            <p id="response"></p>
+            <!-- </div> -->
+
+
+
+
+            <!-- <p id="feedback" style="display:none; margin-top:12px;"></p> -->
         </section>
     </footer>
 
