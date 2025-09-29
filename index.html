@@ -9,8 +9,9 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <div class=" nav-container">
+        <div class="nav-container">
             <img class="logo" src="https://thumbs.dreamstime.com/b/studying-book-icon-146773785.jpg" alt="Logo">
             <div class="menu" onclick="toggleMenu()">☰</div>
             <nav class="navbar" id="navbar">
@@ -83,20 +84,46 @@
             <h3>EEE</h3>
             <p>Electrical and Electronics Engineering learning path.</p>
         </div>
-
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials with marquee -->
     <section class="testimonials" id="testimonials">
-        <h2>What Our Students Say</h2>
-        <marquee behavior="scroll" direction="left" scrollamount="15">
-            <div class="card">Venu</div>
-            <div class="card">Gayathri</div>
-            <div class="card">Sofiya</div>
-            <div class="card">Bhargavi</div>
-            <div class="card">Sekhar</div>
-            <div class="card">Siva</div>
-        </marquee>
+        <h2>Our Professionals</h2>
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="card">
+                    <img src="Siva.png" alt="Siva">
+                    <h4>Siva</h4>
+                </div>
+
+                <div class="card">
+                    <img src="Venu.png" alt="Venu">
+                    <h4>Venu</h4>
+                </div>
+
+                <div class="card">
+                    <img src="Bhargavi.png" alt="Bhargavi">
+                    <h4>Bhargavi</h4>
+                </div>
+
+                <!-- duplicate for smooth loop -->
+
+                <div class="card">
+                    <img src="Siva.png" alt="Siva">
+                    <h4>Siva</h4>
+                </div>
+
+                <div class="card">
+                    <img src="Venu.png" alt="Venu">
+                    <h4>Venu</h4>
+                </div>
+
+                <div class="card">
+                    <img src="Bhargavi.png" alt="Bhargavi">
+                    <h4>Bhargavi</h4>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -109,30 +136,6 @@
             <a href="#testimonials">Testimonials</a> |
             <a href="login.html">Login</a>
         </p>
-
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <!-- <div class="contact-section"> -->
-            <h3>Contact Us</h3>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="college" placeholder="College Name" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-
-                <button type="submit" id="sendBtn">
-                    <span id="btnText">Send</span>
-                    <span class="spinner" id="spinner"></span>
-                </button>
-            </form>
-            <p id="response"></p>
-            <!-- </div> -->
-
-
-
-
-            <!-- <p id="feedback" style="display:none; margin-top:12px;"></p> -->
-        </section>
     </footer>
 
     <script>
@@ -141,8 +144,6 @@
             navbar.style.display = (navbar.style.display === "flex") ? "none" : "flex";
         }
     </script>
-    <script src="contact.js"></script>
-    <script src='https://www.noupe.com/embed/0199725fdeb67a5689fb09b7f499208ed8a7.js'></script>
 </body>
 
 </html>
