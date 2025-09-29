@@ -136,7 +136,25 @@
             <a href="#testimonials">Testimonials</a> |
             <a href="login.html">Login</a>
         </p>
+
+        <section class="contact-section">
+            <h3>Contact Us</h3>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="college" placeholder="College Name" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit" id="sendBtn">
+                    <span id="btnText">Send</span>
+                    <span class="spinner" id="spinner"></span>
+                </button>
+            </form>
+            <p id="response"></p>
+        </section>
     </footer>
+
+    <script src="contact.js"></script>
 
     <script>
         function toggleMenu() {
