@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -5,33 +6,52 @@ body {
     color: #000;
 }
 
-/* header */
+/* Header */
 header {
-    background: rgba(26, 35, 126, 0.9);
-    padding: 10px 15px;
+    background: rgb(64, 72, 166);
+    height: 70px;
+    /* Navbar height */
+    padding: 0 15px;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
-    height: 60px;
+    height: 250px;
+    /* Logo height */
     width: auto;
-    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: -100px;
 }
 
+.name {
+    height: 300px;
+    /* Logo height */
+    width: auto;
+    position: absolute;
+    left: -20px;
+    margin-top: -10px;
+
+}
+
+/* Navbar */
 .navbar {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 60px;
+    /* Align below header */
     right: 15px;
     background: #333;
     border-radius: 8px;
@@ -59,6 +79,7 @@ header {
     display: block;
 }
 
+/* Desktop View */
 @media (min-width: 768px) {
     .navbar {
         display: flex !important;
@@ -77,7 +98,7 @@ header {
     }
 }
 
-/* hero */
+/* Hero Section */
 .hero {
     font-family: 'Patrick Hand', cursive;
     text-align: center;
@@ -102,13 +123,22 @@ header {
     z-index: 1;
 }
 
-.hero h1 {
+#typing-text {
     font-size: 3rem;
-    margin-bottom: 20px;
+    font-weight: bold;
     background: linear-gradient(90deg, #ff2e46, #ffce00);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#typing-para {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #fff;
 }
 
 .btn {
@@ -119,6 +149,8 @@ header {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -127,13 +159,14 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* sections */
-.about,
-.courses,
-.features,
-.testimonials {
+/* Sections */
+section {
     padding: 60px 20px;
     text-align: center;
+}
+
+.about {
+    background: #f9f9f9;
 }
 
 .features {
@@ -141,14 +174,13 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 0 auto;
 }
 
 .feature {
     background: white;
     border-radius: 12px;
     padding: 20px;
-    text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -167,14 +199,16 @@ header {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 300px;
 }
 
 .course:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
-/* marquee */
+/* Marquee */
 .marquee {
     overflow: hidden;
     white-space: nowrap;
@@ -200,7 +234,7 @@ header {
 
 .card {
     display: inline-block;
-    width: 220px;
+    width: 180px;
     background: white;
     border-radius: 12px;
     padding: 10px;
@@ -209,23 +243,13 @@ header {
 }
 
 .card img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-bottom: 8px;
 }
 
-.card h4 {
-    margin: 4px 0;
-    font-size: 16px;
-}
-
-.card p {
-    font-size: 14px;
-    margin: 0;
-}
-
-/* footer */
+/* Footer */
 footer {
     background: #1a237e;
     color: white;
@@ -239,15 +263,13 @@ footer a {
     text-decoration: none;
 }
 
+/* Contact Section */
 .contact-section {
     max-width: 600px;
     margin: 30px auto;
     background: #ffffff;
-    /* card background */
     border-radius: 12px;
-    /* rounded corners */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    /* shadow for card effect */
     padding: 32px 24px;
     color: #000;
     text-align: left;
@@ -289,4 +311,21 @@ footer a {
 .contact-section button:hover {
     background: #ffce00;
     color: #333;
+}
+
+.spinner {
+    display: none;
+    margin-left: 8px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

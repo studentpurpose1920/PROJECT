@@ -12,7 +12,8 @@
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <img class="logo" src="https://thumbs.dreamstime.com/b/studying-book-icon-146773785.jpg" alt="Logo">
+            <img class="logo" src="20251002_162250.png" alt="Logo">
+            <img class="name" src="20251002_161819.png" alt="Name">
             <div class="menu" onclick="toggleMenu()">☰</div>
             <nav class="navbar" id="navbar">
                 <a href="#home">Home</a>
@@ -28,8 +29,8 @@
     <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Welcome to EASY WORLD</h1>
-            <p>Learn, Grow, and Succeed with our immersive learning experience</p>
+            <h1 id="typing-text"></h1>
+            <p id="typing-para"></p>
             <a href="login.html" class="btn">Get Started</a>
         </div>
     </section>
@@ -95,29 +96,24 @@
                     <img src="Siva.png" alt="Siva">
                     <h4>Siva</h4>
                 </div>
-
                 <div class="card">
                     <img src="Venu.png" alt="Venu">
                     <h4>Venu</h4>
                 </div>
-
                 <div class="card">
                     <img src="Bhargavi.png" alt="Bhargavi">
                     <h4>Bhargavi</h4>
                 </div>
 
                 <!-- duplicate for smooth loop -->
-
                 <div class="card">
                     <img src="Siva.png" alt="Siva">
                     <h4>Siva</h4>
                 </div>
-
                 <div class="card">
                     <img src="Venu.png" alt="Venu">
                     <h4>Venu</h4>
                 </div>
-
                 <div class="card">
                     <img src="Bhargavi.png" alt="Bhargavi">
                     <h4>Bhargavi</h4>
@@ -154,14 +150,7 @@
         </section>
     </footer>
 
-    <script src="contact.js"></script>
-
-    <script>
-        function toggleMenu() {
-            const navbar = document.getElementById("navbar");
-            navbar.style.display = (navbar.style.display === "flex") ? "none" : "flex";
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
