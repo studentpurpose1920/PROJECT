@@ -1,4 +1,4 @@
-const scriptURL = 'https://docs.google.com/spreadsheets/d/1DbAs4CB5nF2q_8nOZUORnE6jTpr1hYkyYiGzwKD02Vc/edit?usp=sharing';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxu0k8yzYyrxgC_Aqjfk4LufX3q0A7spFFf741nM8istjP_J_SksdR00-hYuZolsNR58A/exec';
 const form = document.forms['contact-form'];
 const loadingPopup = document.getElementById('loading');
 

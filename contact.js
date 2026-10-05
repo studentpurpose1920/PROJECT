@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbynGFS1eeSbpN21DNeOmlApUEXzkArT-6VwTQK6kdY9_c9-jDkS493bBfLjXxr8i0kX/exec"; // Replace with your Apps Script URL
+const scriptURL = "https://script.google.com/macros/s/AKfycbw7Wnt0A4-ZhU1zoclOG37OpJdzlZr5V5xiGPk0VnQPYkPKOf1CZr0MUEihP_lKBO6O/exec"; // Replace with your Apps Script URL
 const form = document.getElementById("contactForm");
 const response = document.getElementById("response");
 
